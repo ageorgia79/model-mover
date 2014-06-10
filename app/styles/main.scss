@@ -1,0 +1,135 @@
+// bower:scss
+// endbower
+
+body {
+    background: black;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+}
+
+.header {
+	font-weight: bold;
+	font-size: 50px;
+	padding-bottom: 35px;
+	margin: 0 auto;
+	width: 99%;
+	height: 70px;
+	background-color: black;
+	color: red;
+	text-align: center;
+}
+
+.container {
+	margin: 0 auto;
+	width: 100%;
+	height: 1000px;
+	
+}
+
+.modelcage1 {
+	background-image: url(http://www.dulcimers.com/picts/green/background-sidebar.jpg);
+	width: 400px;
+	height: 600px;
+	border: 2px solid black;
+	float: left;
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-left: 35px;
+	margin-right: 40px;
+	margin-top: 50px;
+	border-radius: 10px;
+	overflow: scroll;
+	box-shadow: 2px 2px 40px red;
+	img {
+		margin-left: 125px;
+		margin-top: 25px;
+		border: 2px solid black;
+		box-shadow: 5px 5px 60px black;
+	}
+	
+
+
+}
+
+
+.modelcage2 {
+	background-image: url(http://www.dulcimers.com/picts/green/background-sidebar.jpg);
+	width: 400px;
+	height: 600px;
+	border: 2px solid black;
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: 35px;
+	margin-top: 50px;
+	border-radius: 10px;
+	overflow: scroll;
+	box-shadow: 2px 2px 40px red;
+	
+	
+}
+
+.modelcage3 {
+	background-image: url(http://www.dulcimers.com/picts/green/background-sidebar.jpg);
+	width: 400px;
+	height: 600px;
+	border: 2px solid black;
+	display: inline-block;
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-top: 50px;
+	border-radius: 10px;
+	overflow: scroll;
+	box-shadow: 2px 2px 40px red;
+	
+}
+
+.movebutton1 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 150px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+	
+}
+
+.movebutton2 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 130px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+}
+
+.deletebutton1 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 110px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+}
+
+
+
