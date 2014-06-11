@@ -66,7 +66,12 @@ body {
 	border-radius: 10px;
 	overflow: scroll;
 	box-shadow: 2px 2px 40px red;
-	
+	img {
+		margin-left: 125px;
+		margin-top: 25px;
+		border: 2px solid black;
+		box-shadow: 5px 5px 60px black;
+	}
 	
 }
 
@@ -116,6 +121,51 @@ body {
 	border-radius: 6px;
 }
 
+.movebutton3 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 150px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+}
+
+.movebutton4 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 130px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+}
+
+.savebutton1 {
+	height: 30px;
+	width: 80px;
+	background: black;
+	border: 2px solid black;
+	color: green;
+	text-align: center;
+	position: relative;
+	bottom: 110px;
+	margin-left: 25px;
+	cursor: pointer;
+	box-shadow: 5px 5px 20px green;
+	border-radius: 6px;
+}
+
 .deletebutton1 {
 	height: 30px;
 	width: 80px;
@@ -130,6 +180,8 @@ body {
 	box-shadow: 5px 5px 20px green;
 	border-radius: 6px;
 }
+
+
 
 
 
