@@ -64,10 +64,7 @@ var ThumbnailViewOne = Backbone.View.extend({
     }
   },
 
-  //showDetailView: function(){
-    //var detail = new DetailView({model: this.model});
-    //$('.modelcage1').append(detail);
-  //},
+  
 });
 
 //VIEW ONE ABOVE THIS LINE///////////////////////////////////////////////////////////////////////////////////////
