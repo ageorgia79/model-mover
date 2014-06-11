@@ -14,7 +14,7 @@ var PhotoCollectionOne = Backbone.Collection.extend({
 
   model: Photo,
 
-  url: 'http://tiny-pizza-server.herokuapp.com/collections/photos'
+  url: 'http://tiny-pizza-server.herokuapp.com/collections/georgiaphoto'
 });
 
 //COLLECTION ONE ABOVE THIS LINE/////////////////////////////////////////////////////////////////////////////
@@ -27,6 +27,15 @@ var PhotoCollectionTwo = Backbone.Collection.extend({
 });
 
 //COLLECTION TWO ABOVE THIS LINE/////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var PhotoCollectionThree = Backbone.Collection.extend({
+
+  model: Photo,
+
+  url: 'http://tiny-pizza-server.herokuapp.com/collections/moregeorgiaphotos'
+});
+
+//COLLECTION THREE ABOVE THIS LINE///////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var ThumbnailViewOne = Backbone.View.extend({
@@ -93,6 +102,34 @@ var ThumbnailViewTwo = Backbone.View.extend({
 //VIEW TWO ABOVE THIS LINE///////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+var ThumbnailViewThree = Backbone.View.extend({
+
+  classname: 'thumbnail',
+  thumbnailTemplate3: _.template($('.thumbnail-template-three').text()),
+
+  events: {
+
+    'click .movebutton5': 'jump5',
+    'click .movebutton6': 'jump6',
+    'click .savebutton2': 'save2',
+  },
+
+  initialize: function(){
+    $('.modelcage3').append(this.el);
+    this.render();
+  },
+
+  render: function(){
+    if (this.model.attributes.hasOwnProperty('url')) {
+      var renderedTemplate = this.thumbnailTemplate3(this.model.attributes);
+      this.$el.html(renderedTemplate);
+    }
+  },
+});
+
+//VIEW THREE ABOVE THIS LINE/////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 var AppView = Backbone.View.extend({
 
   initialize: function(){
@@ -107,3 +144,38 @@ var coolPhotos = new PhotoCollectionOne();
 var app = new AppView();
 
 coolPhotos.fetch();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var AppView2 = Backbone.View.extend({
+
+  initialize: function(){
+    this.listenTo(coolerPhotos, 'add', function(photo){
+      new ThumbnailViewTwo({model: photo});
+
+    });
+  }
+});
+
+var coolerPhotos = new PhotoCollectionTwo();
+
+var apps = new AppView2();
+
+coolerPhotos.fetch();
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+var AppView3 = Backbone.View.extend({
+
+  initialize: function(){
+    this.listenTo(coolestPhotos, 'add', function(photo){
+      new ThumbnailViewThree({model: photo});
+    });
+  }
+});
+
+var coolestPhotos = new PhotoCollectionThree();
+
+var app3 = new AppView3();
+
+coolestPhotos.fetch();
